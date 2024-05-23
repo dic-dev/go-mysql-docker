@@ -1,0 +1,6 @@
+# .gitignore
+tmp
+bin
+*templ.go
+assets/css/tailwind.css
+node_modules/

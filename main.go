@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 
+	// "github.com/labstack/echo/v4"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -49,6 +50,13 @@ func usersPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+  // echo
+  // e := echo.New()
+  // e.GET("/", func(c echo.Context) error {
+  //   return c.String(http.StatusOK, "Hello, World!")
+  // })
+  // e.Logger.Fatal(e.start(":8080"))
+
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/users", usersPage)
 	log.Fatal(http.ListenAndServe(":8080", nil))
